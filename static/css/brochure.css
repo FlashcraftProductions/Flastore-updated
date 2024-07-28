@@ -1,0 +1,354 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container1 {
+  max-width: 100%;
+  margin-top: 75px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container2 {
+  max-width: 100%;
+  margin-top: 20px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 20px 0px 0px rgba(0,0,0,0.1);
+}
+
+.brochure-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.image-section {
+  flex: 1;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+}
+
+.details-section {
+  flex: 1;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.subheading {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.quantity-section {
+  margin-top: 20px;
+}
+
+.quantity-section label {
+  font-weight: bold;
+}
+
+.quantity-selection {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quantity-selection input[type="radio"] {
+  margin-right: 5px;
+}
+
+.price-info {
+  margin-top: 20px;
+}
+
+.price-info label {
+  font-weight: bold;
+}
+
+.price-info p {
+  margin: 5px 0;
+}
+
+.price-info .recommended {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.unit-price {
+  font-size: 14px;
+  color: #666;
+}
+
+.savings {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  background-color: #ff6600;
+  border: #c95000;
+  color: #fff;
+}
+
+.getestimate {
+padding: 10px 20px;
+cursor: pointer;
+background-color: #ff6347; /* Tomato background color */
+color: white;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.getestimate :hover {
+background-color: #e55337; /* Darker shade of tomato */
+transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.getestimate :active {
+background-color: #cc4b2f; /* Even darker shade for active state */
+transform: scale(1); /* Reset scale when clicked */
+}
+
+
+/* Contact Us Section */
+#contact {
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f4f4f4;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Form Styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap between elements */
+  max-width: 500px;
+  background-color: #fff;
+  padding: 25px; /* Increased padding */
+  border-radius: 10px;
+  position: relative;
+}
+
+.message {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 16px; /* Increased font size */
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 8px; /* Increased gap */
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input,
+.input01 {
+  width: 100%;
+  padding: 15px; /* Increased padding */
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 5px;
+  font-size: 16px; /* Increased font size */
+}
+
+.form label .input + span,
+.form label .input01 + span {
+  position: absolute;
+  left: 15px; /* Adjusted position */
+  top: 20px; /* Adjusted position */
+  color: grey;
+  font-size: 1em; /* Increased font size */
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span,
+.form label .input01:placeholder-shown + span {
+  top: 20px; /* Adjusted position */
+  font-size: 1em; /* Increased font size */
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span,
+.form label .input01:focus + span,
+.form label .input01:valid + span {
+  top: 35px; /* Adjusted position */
+  font-size: 0.8em; /* Increased font size */
+  font-weight: 600;
+}
+
+.form label .input:valid + span,
+.form label .input01:valid + span {
+  color: green;
+}
+
+/* Button Styling */
+.fancy {
+  background-color: transparent;
+  border: 2px solid #cacaca;
+  border-radius: 5px; /* Added border radius for rounded corners */
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 2px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 12px 35px; /* Increased padding */
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase; /* Changed text-transform for uppercase text */
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 16px; /* Increased font size */
+}
+
+
+.fancy .text {
+  font-size: 1.25em; /* Increased font size */
+  line-height: 1.5em; /* Adjusted line-height */
+  padding-left: 2.5em; /* Increased padding */
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: none;
+  text-decoration: none;
+  color: #818181;
+  transform: translateX(30%);
+}
+
+.fancy .top-key,
+.fancy .bottom-key-1,
+.fancy .bottom-key-2 {
+  transition: width 0.5s ease-out, left 0.3s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+  color: white;
+  background: #cacaca;
+}
+
+.fancy:hover::before {
+  width: 1.75rem; /* Adjusted width */
+  background: white;
+}
+
+.fancy:hover .text {
+  color: white;
+  padding-left: 2em; /* Adjusted padding */
+}
+
+.fancy:hover .top-key {
+  left: -2px;
+  width: 0;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+}

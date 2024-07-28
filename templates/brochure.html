@@ -1,0 +1,188 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container1">
+<section class="tri-fold">
+    <!-- Tri-fold Brochure Section -->
+    <div class="brochure-section" id="tri-fold-section">
+        <div class="image-section">
+            <img id="main-image-tri" src="static/products/brochure.jpg" alt="tri-fold brochure">
+        </div>
+        <div class="details-section">
+            <h1>Tri-fold Brochures</h1>
+            <p class="subheading">Perfect for Trade Shows, Exhibitions, Seminars, and Conferences</p>
+            <ul>
+                <li>Folds & panels help organise or highlight information</li>
+                <li>6 Panel Trifold</li>
+                <li>Design options for all sizes</li>
+                <li>Delivered pre-folded for your convenience</li>
+                <li>Looking for Brochures in bulk? <a href="#contact">Click here</a></li>
+            </ul>
+            <p>Price below is MRP (inclusive of all taxes)</p>
+            <br>
+            
+            <div class="quantity-section">
+                <label>Quantity:</label>
+                <div class="quantity-selection">
+                    <input type="radio" id="quantity25-tri" name="quantity-tri" value="25" checked>
+                    <label for="quantity25-tri">25</label>
+                    <input type="radio" id="quantity50-tri" name="quantity-tri" value="50">
+                    <label for="quantity50-tri">50</label>
+                </div>
+            </div>
+
+            <div class="price-info">
+                <label>Estimated Price :</label>
+                <p id="price-25-tri"><span>₹530.00</span> <span class="unit-price">₹21.20 / unit</span></p>
+                <p id="price-50-tri" class="recommended"><span>₹960.00</span> <span class="unit-price">₹19.20 / unit</span> <span class="savings">9% savings</span></p>
+            </div>
+            <button class="getestimate" id="contact-us" >Get estimate</button>
+        </div>
+    </div>
+</div>
+</section>
+
+<div class="container2">
+   <!-- Bi-fold Brochure Section -->
+    <div class="brochure-section" id="bi-fold-section">
+        <div class="image-section">
+            <img id="main-image-bi" src="static/products/brochure 3.jpg" alt="bi-fold brochure">
+        </div>
+        <div class="details-section">
+            <h1>Bi-fold Brochures</h1>
+            <p class="subheading">Perfect for Trade Shows, Exhibitions, Seminars, and Conferences</p>
+            <ul>
+                <li>Folds & panels help organise or highlight information</li>
+                <li>4 Panel Bi-fold</li>
+                <li>Design options for all sizes</li>
+                <li>Delivered pre-folded for your convenience</li>
+                <li>Looking for Brochures in bulk? <a href="#contact">Click here</a></li>
+            </ul>
+            <p>Price below is MRP (inclusive of all taxes)</p>
+            <br>
+            <div class="quantity-section">
+                <label>Quantity:</label>
+                <div class="quantity-selection">
+                    <input type="radio" id="quantity25-bi" name="quantity-bi" value="25" checked>
+                    <label for="quantity25-bi">25</label>
+                    <input type="radio" id="quantity50-bi" name="quantity-bi" value="50">
+                    <label for="quantity50-bi">50</label>
+                </div>
+            </div>
+
+            <div class="price-info">
+                <label>Estimated Price :</label>
+                <p id="price-25-bi"><span>₹370.00</span> <span class="unit-price">₹14.80 / unit</span></p>
+                <p id="price-50-bi" class="recommended"><span>₹680.00</span> <span class="unit-price">₹13.60 / unit</span> <span class="savings">8% savings</span></p>
+            </div>
+            <button class="getestimate" id="contact-us2" >Get estimate</button>
+        </div>
+    </div>
+</div>
+
+
+<section id="contact">
+    <h2>Share your requirement</h2>
+    <div class="contact-form">
+        <form class="form" action="/" method="POST">
+
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="first_name">
+                    <span>first name</span>
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="last_name">
+                    <span>last name</span>
+                </label>
+            </div>  
+                    
+            <label>
+                <input required="" placeholder="" type="email" class="input" name="email">
+                <span>email</span>
+            </label> 
+                
+            <label>
+                <input required="" name="contact" type="tel" placeholder="" class="input">
+                <span>contact number</span>
+            </label>
+            <label>
+                <textarea required="" rows="3" name="message" placeholder="" class="input01"></textarea>
+                <span>message</span>
+            </label>
+            
+            <button class="fancy" href="#">
+             submit
+            </button>
+        </form>
+
+        
+        {% with messages= get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        
+    </div>
+
+        
+</section>
+
+<script>
+document.querySelectorAll('input[name="quantity-tri"]').forEach(input => {
+    input.addEventListener('change', updatePriceTri);
+});
+
+document.querySelectorAll('input[name="quantity-bi"]').forEach(input => {
+    input.addEventListener('change', updatePriceBi);
+});
+
+function updatePriceTri() {
+    const quantity = document.querySelector('input[name="quantity-tri"]:checked').value;
+    const price25 = document.getElementById('price-25-tri');
+    const price50 = document.getElementById('price-50-tri');
+
+    if (quantity === "25") {
+        price25.style.display = 'block';
+        price50.style.display = 'none';
+    } else {
+        price25.style.display = 'none';
+        price50.style.display = 'block';
+    }
+}
+
+function updatePriceBi() {
+    const quantity = document.querySelector('input[name="quantity-bi"]:checked').value;
+    const price25 = document.getElementById('price-25-bi');
+    const price50 = document.getElementById('price-50-bi');
+
+    if (quantity === "25") {
+        price25.style.display = 'block';
+        price50.style.display = 'none';
+    } else {
+        price25.style.display = 'none';
+        price50.style.display = 'block';
+    }
+}
+
+// Initialize the prices on page load
+updatePriceTri();
+updatePriceBi();
+
+document.getElementById('contact-us').addEventListener('click', function() {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+
+document.getElementById('contact-us2').addEventListener('click', function() {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+
+
+{% endblock %}

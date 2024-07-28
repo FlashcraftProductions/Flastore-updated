@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container">
+    <div class="invitation-image">
+        <img src="static\products\invitation2.jpg" alt="Wedding Invitation">
+    </div>
+    <div class="invitation-details">
+        <h1>Wedding Invitations</h1>
+        <ul>
+            <li>Let's bring your vision to life.</li>
+        </ul>
+        <a href="#">See Details</a>
+
+        <div class="customization-options">
+            <label for="fold">Fold</label>
+            <select id="fold">
+                <option value="select">Select</option>
+                <option value="select">Flat</option>
+                <option value="select">Bi-Fold</option>
+            </select>
+            <br> 
+            <label for="size">Size</label>
+            <select id="size">
+                <option value="select">Select</option>
+                <option value="select">12.7 X 17.8 CM</option>
+                <option value="select">15.2 X 22.9 CM</option>
+            </select>
+            <br>
+            <label for="fold">Type</label>
+            <select id="fold">
+                <option value="select">Select</option>
+                <option value="select">Print</option>
+                <option value="select">Digital</option>
+            </select>
+            <br> 
+            <p>10 starting at ₹300.00</p>
+            <p>FREE Shipping</p>
+        </div>
+            <button id="contact-us" >Get estimate</button>
+    </div>
+ 
+</div>
+
+<section id="contact">
+    <h2>Share your requirement</h2>
+    <div class="contact-form">
+        <form class="form" action="/" method="POST">
+
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="first_name">
+                    <span>first name</span>
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="last_name">
+                    <span>last name</span>
+                </label>
+            </div>  
+                    
+            <label>
+                <input required="" placeholder="" type="email" class="input" name="email">
+                <span>email</span>
+            </label> 
+                
+            <label>
+                <input required="" name="contact" type="tel" placeholder="" class="input">
+                <span>contact number</span>
+            </label>
+            <label>
+                <textarea required="" rows="3" name="message" placeholder="" class="input01"></textarea>
+                <span>message</span>
+            </label>
+            
+            <button class="fancy" href="#">
+             submit
+            </button>
+        </form>
+
+        
+        {% with messages= get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        
+    </div>
+
+        
+</section>
+
+<script>
+
+document.getElementById('quantity').addEventListener('input', updatePrice);
+
+function updatePrice() {
+    const unitPrice = 1750.00;
+    const quantity = document.getElementById('quantity').value;
+    const totalPrice = unitPrice * quantity;
+    document.getElementById('unit-price').textContent = `₹${unitPrice.toFixed(2)}`;
+    document.getElementById('total-price').textContent = `₹${totalPrice.toFixed(2)}`;
+}
+
+
+</script>
+
+
+{% endblock %}

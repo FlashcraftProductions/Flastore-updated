@@ -1,0 +1,210 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Engaging, branded content for all platforms.</h1>
+        <p>Creative and branded social media posts.</p>
+        <button class="top_button" id="get-in-touch" >
+            Get In Touch
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+            </svg>
+        </button>
+    </div>
+    <div class="hero-image">
+        <img src="{{url_for('static',filename='products/media.png')}}" alt="business card">
+    </div>
+</section>
+<section class="categories">
+    <h2>Category</h2>
+    <div class="category-list">
+        <button id="InstagramButton">Instagram</button>
+        <button id="FacebookButton">Facebook</button>
+        <button id="LinkedInButton">LinkedIn</button>
+    </div>
+</section>
+<section id="Instagram" class="type1">
+    <h2>Instagram Posts</h2>
+    <div class="product-cards">
+        <a class="link" href="#contact">
+        <div class="card">
+            <img src="{{url_for('static',filename='products/sm1.jpg')}}" alt="Instagram posts">
+            <h3>Instagram</h3>
+            <p>Posts starting from<br> ₹ 300</p>
+        </div>
+        </a>
+
+        <a class="link" href="#contact">
+        <div class="card">
+            <img src="{{url_for('static',filename='products/sm2.jpg')}}" alt="Instagram Story">
+            <h3>Instagram</h3>
+            <p>Story starting from <br> ₹ 200</p>
+        </div>
+        </a>
+        <a class="link" href="#contact">
+        <div class="card">
+            <img src="{{url_for('static',filename='products/sm4.jpg')}}" alt="Instagram Reels">
+            <h3>Instagram</h3>
+            <p>Reels Starting at <br> ₹ 340.00</p>
+        </div>
+        </a>
+        <a class="link" href="#contact">
+        <div class="card">
+            <img src="{{url_for('static',filename='products/sm5.jpg')}}" alt="Instagram ads">
+            <h3>Instagram</h3>
+            <p>ads, starting from <br> ₹ 350</p>
+        </div>
+        </a>   
+    </div>
+</section>
+<!-- type 2 -->
+<section id="Facebook" class="type2">
+    <h2>Facebook Posts</h2>
+    <div class="product-cards">
+        <a class="link" href="#contact">
+        <div class="card">
+            <img src="{{url_for('static',filename='products/sm7.jpg')}}" alt="Facebook Post">
+            <h3>Facebook</h3>
+            <p>Posts starting from<br> ₹ 300</p>
+        </div>
+        </a>
+
+        <a class="link" href="#contact">
+        <div class="card">
+            <img src="{{url_for('static',filename='products/sm9.jpg')}}" alt="Facebook Story">
+            <h3>Facebook</h3>
+            <p>Story starting from <br> ₹ 330</p>
+        </div>
+        </a>
+        <a class="link" href="#contact">
+        <div class="card">
+            <img src="{{url_for('static',filename='products/sm10.jpg')}}" alt="Facebook Reels">
+            <h3>Facebook</h3>
+            <p>Reels Starting at <br> ₹ 350.00</p>
+        </div>
+        </a>
+        <a class="link" href="#contact">
+        <div class="card">
+            <img src="{{url_for('static',filename='products/sm11.jpg')}}" alt="Facebook ads">
+            <h3>Facebook</h3>
+            <p>ads, starting from <br> ₹ 500</p>
+        </div>
+        </a>   
+    </div>
+</section>
+
+<!-- type 3 -->
+<section id="Linkdin" class="type3">
+    <h2>Linkdin Posts</h2>
+    <div class="product-cards">
+        <a class="link" href="#contact">
+        <div class="card">
+            <img src="{{url_for('static',filename='products/sm12.jpg')}}" alt="Facebook Post">
+            <h3>Linkdin
+            </h3>
+            <p>Posts starting from<br> ₹ 300</p>
+        </div>
+        </a>
+
+        <a class="link" href="#contact">
+        <div class="card">
+            <img src="{{url_for('static',filename='products/sm13.jpg')}}" alt="Facebook Story">
+            <h3>Linkdin</h3>
+            <p>Story starting from <br> ₹ 330</p>
+        </div>
+        </a>
+        <a class="link" href="#contact">
+        <div class="card">
+            <img src="{{url_for('static',filename='products/sm14.jpg')}}" alt="Facebook Reels">
+            <h3>Linkdin</h3>
+            <p>Reels Starting at <br> ₹ 350.00</p>
+        </div>
+        </a>
+        <a class="link" href="#contact">
+        <div class="card">
+            <img src="{{url_for('static',filename='products/sm15.jpg')}}" alt="Facebook ads">
+            <h3>Linkdin</h3>
+            <p>ads, starting from <br> ₹ 500</p>
+        </div>
+        </a>   
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+        <form class="form" action="/" method="POST">
+
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="first_name">
+                    <span>first name</span>
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="last_name">
+                    <span>last name</span>
+                </label>
+            </div>  
+                    
+            <label>
+                <input required="" placeholder="" type="email" class="input" name="email">
+                <span>email</span>
+            </label> 
+                
+            <label>
+                <input required="" name="contact" type="tel" placeholder="" class="input">
+                <span>contact number</span>
+            </label>
+            <label>
+                <textarea required="" rows="3" name="message" placeholder="" class="input01"></textarea>
+                <span>message</span>
+            </label>
+            
+            <button class="fancy" href="#">
+             submit
+            </button>
+        </form>
+
+        
+        {% with messages= get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        
+    </div>
+
+        
+</section>
+
+<script>
+
+    document.querySelectorAll('.top_button').forEach(function(element) {
+    element.addEventListener('click', function() {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+document.getElementById('InstagramButton').addEventListener('click', function() {
+    document.getElementById('Instagram').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('FacebookButton').addEventListener('click', function() {
+    document.getElementById('Facebook').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('LinkedInButton').addEventListener('click', function() {
+    document.getElementById('LinkedIn').scrollIntoView({ behavior: 'smooth' });
+});
+
+
+</script>
+
+{% endblock %}

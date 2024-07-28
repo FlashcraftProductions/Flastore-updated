@@ -1,0 +1,149 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Premium custom stationery</h1>
+        <p>Create a lasting impression with our high-quality, custom business cards</p>
+        <button class="top_button" id="get-in-touch" >
+            Get In Touch
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+            </svg>
+        </button>
+    </div>
+    <div class="hero-image">
+        <img src="{{url_for('static',filename='products/tape3.png')}}" alt="business card">
+    </div>
+</section>
+
+<section id="services" class="type1">
+    <h2>Custom Stationery</h2>
+    <div class="product-cards">
+        <a href='#'>
+        <div class="card">
+            <img src="{{url_for('static',filename='products/sticker.jpg')}}" alt="T-shirt Printing">
+            <h3>Stickers</h3>
+            <p>100 Pecs, starting from <br> ₹ 300</p>
+        </div>
+        </a>
+
+        <a href='#'>
+        <div class="card">
+            <img src="{{url_for('static',filename='products/tag.jpg')}}" alt="Business Cards">
+            <h3>Luggage Tags</h3>
+            <p>100 Pecs, starting from <br> ₹ 330</p>
+        </div>
+        </a>
+        <a href='#'>
+        <div class="card">
+            <img src="{{url_for('static',filename='products/box1.jpg')}}" alt="Poster & Banner">
+            <h3>Multi-parpouse Box</h3>
+            <p>100 Pecs Starting at <br> ₹ 340.00</p>
+        </div>
+        </a>
+        <a href="#">
+        <div class="card">
+            <img src="{{url_for('static',filename='products/box 2.jpg')}}" alt="Poster & Banner">
+            <h3>Hamper Box</h3>
+            <p>100 Pecs, starting from <br> ₹ 350</p>
+        </div>
+        </a>   
+
+        <a href="#">
+            <div class="card">
+                <img src="{{url_for('static',filename='products/tape2.jpg')}}" alt="Poster & Banner">
+                <h3>Branding tape</h3>
+                <p>100 Pecs, starting from <br> ₹ 350</p>
+            </div>
+        </a> 
+
+        <a href="#">
+            <div class="card">
+                    <img src="{{url_for('static',filename='products/beer.jpg')}}" alt="Poster & Banner">
+                    <h3>Beer Mugs</h3>
+                    <p>100 Pecs, starting from <br> ₹ 350</p>
+            </div>
+        </a> 
+
+        <a href="#">
+            <div class="card">
+                    <img src="{{url_for('static',filename='products/bottle1.jpg')}}" alt="Poster & Banner">
+                    <h3>cutom Bottles</h3>
+                    <p>100 Pecs, starting from <br> ₹ 350</p>
+            </div>
+        </a> 
+
+        <a href="#">
+            <div class="card">
+                    <img src="{{url_for('static',filename='products/coffeemug.jpg')}}" alt="Poster & Banner">
+                    <h3>Coffee Mugs</h3>
+                    <p>100 Pecs, starting from <br> ₹ 350</p>
+            </div>
+        </a> 
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Share your requirements</h2>
+    <div class="contact-form">
+        <form class="form" action="/" method="POST">
+
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="first_name">
+                    <span>first name</span>
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="last_name">
+                    <span>last name</span>
+                </label>
+            </div>  
+                    
+            <label>
+                <input required="" placeholder="" type="email" class="input" name="email">
+                <span>email</span>
+            </label> 
+                
+            <label>
+                <input required="" name="contact" type="tel" placeholder="" class="input">
+                <span>contact number</span>
+            </label>
+            <label>
+                <textarea required="" rows="3" name="message" placeholder="" class="input01"></textarea>
+                <span>message</span>
+            </label>
+            
+            <button class="fancy" href="#">
+             submit
+            </button>
+        </form>
+
+        
+        {% with messages= get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        
+    </div>
+
+        
+</section>
+
+<script>
+document.querySelectorAll('.top_button').forEach(function(element) {
+    element.addEventListener('click', function() {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+});
+</script>
+
+{% endblock %}

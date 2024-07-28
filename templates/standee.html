@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container">
+    <div class="image-section">
+        <img src="static\products\standeenew.png" alt="Standee Image">
+    </div>
+    <div class="details-section">
+        <h1>Standees</h1>
+        <p class="subheading">Event prep just got easier.</p>
+        <ul>
+            <li>Available in two sizes: 2.5 feet x 6 feet (77 cm x 185 cm) and 2 ft x 5 feet (60.96 cm x 157.8 cm)</li>
+            <li>Perfect for conferences and exhibitions</li>
+            <li>Professional looking, lightweight, sturdy and water resistant</li>
+            <li>Standees are also known as Retractable banners, Roller banners or Pop-up banners</li>
+        </ul>
+    
+        <div class="size-selection">
+            <label for="size">Size:</label>
+            <select id="size">
+                <option value="2.5x6">2.5 feet x 6 feet</option>
+                <option value="2x5">2 feet x 5 feet</option>
+            </select>
+        </div>
+        <div class="quantity-selection">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" value="1" min="1">
+        </div>
+        <div class="price-info">
+            <h1>Estimated Price :</h1>
+            <p><span id="unit-price">₹1,750.00</span> / unit</p>
+            <p>Total: <span id="total-price">₹1,750.00</span></p>
+        </div>
+        <button class="getestimate" id="contact-us" >Get estimate</button>
+    </div>
+</div>
+
+<section id="contact">
+    <h2>Share your requirement</h2>
+    <div class="contact-form">
+        <form class="form" action="/" method="POST">
+
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="first_name">
+                    <span>first name</span>
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="last_name">
+                    <span>last name</span>
+                </label>
+            </div>  
+                    
+            <label>
+                <input required="" placeholder="" type="email" class="input" name="email">
+                <span>email</span>
+            </label> 
+                
+            <label>
+                <input required="" name="contact" type="tel" placeholder="" class="input">
+                <span>contact number</span>
+            </label>
+            <label>
+                <textarea required="" rows="3" name="message" placeholder="" class="input01"></textarea>
+                <span>message</span>
+            </label>
+            
+            <button class="fancy" href="#">
+             submit
+            </button>
+        </form>
+
+        
+        {% with messages= get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        
+    </div>
+
+        
+</section>
+
+<script>
+
+document.getElementById('quantity').addEventListener('input', updatePrice);
+
+function updatePrice() {
+    const unitPrice = 1750.00;
+    const quantity = document.getElementById('quantity').value;
+    const totalPrice = unitPrice * quantity;
+    document.getElementById('unit-price').textContent = `₹${unitPrice.toFixed(2)}`;
+    document.getElementById('total-price').textContent = `₹${totalPrice.toFixed(2)}`;
+}
+
+ document.getElementById('contact-us').addEventListener('click', function() {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+
+
+</script>
+
+
+{% endblock %}

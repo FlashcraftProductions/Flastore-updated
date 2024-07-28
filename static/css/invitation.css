@@ -1,0 +1,348 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.invitation-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px;
+}
+
+.invitation-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.invitation-details {
+    margin-left: 20px;
+}
+
+.invitation-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.invitation-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.invitation-details ul li {
+    margin-bottom: 5px;
+}
+
+.invitation-details a {
+    display: block;
+    margin-bottom: 10px;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.customization-options label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.customization-options select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* test code */
+
+.customization-options {
+  width: 600px;
+  background-color: #f9f9f9; /* Light background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.customization-options label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.customization-options select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none; /* Remove default dropdown arrow */
+  background-color: #fff;
+}
+
+.customization-options option {
+  padding: 50px; /* Customize padding inside options */
+  background-color: #fff; /* Option background color */
+  color: #000000; /* Option text color */
+}
+
+.customization-options p {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* For older browsers compatibility */
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/* test code */
+
+button {
+    padding: 10px 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #ff6600;
+    border: #c95000;
+    color: #fff;
+}
+
+
+
+#contact-us {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #ff6347; /* Tomato background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contact-us:hover {
+  background-color: #e55337; /* Darker shade of tomato */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+#contact-us:active {
+  background-color: #cc4b2f; /* Even darker shade for active state */
+  transform: scale(1); /* Reset scale when clicked */
+}
+/* Contact Us Section */
+#contact {
+    padding: 60px 20px;
+    background: #f4f4f4;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #444;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+  }
+  
+  .contact-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Form Styling */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increased gap between elements */
+    max-width: 500px;
+    background-color: #fff;
+    padding: 25px; /* Increased padding */
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .message {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 16px; /* Increased font size */
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 8px; /* Increased gap */
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input,
+  .input01 {
+    width: 100%;
+    padding: 15px; /* Increased padding */
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 5px;
+    font-size: 16px; /* Increased font size */
+  }
+  
+  .form label .input + span,
+  .form label .input01 + span {
+    position: absolute;
+    left: 15px; /* Adjusted position */
+    top: 20px; /* Adjusted position */
+    color: grey;
+    font-size: 1em; /* Increased font size */
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span,
+  .form label .input01:placeholder-shown + span {
+    top: 20px; /* Adjusted position */
+    font-size: 1em; /* Increased font size */
+  }
+  
+  .form label .input:focus + span,
+  .form label .input:valid + span,
+  .form label .input01:focus + span,
+  .form label .input01:valid + span {
+    top: 35px; /* Adjusted position */
+    font-size: 0.8em; /* Increased font size */
+    font-weight: 600;
+  }
+  
+  .form label .input:valid + span,
+  .form label .input01:valid + span {
+    color: green;
+  }
+  
+  /* Button Styling */
+  .fancy {
+    background-color: transparent;
+    border: 2px solid #cacaca;
+    border-radius: 5px; /* Added border radius for rounded corners */
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 2px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 12px 35px; /* Increased padding */
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase; /* Changed text-transform for uppercase text */
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 16px; /* Increased font size */
+  }
+  
+  
+  .fancy .text {
+    font-size: 1.25em; /* Increased font size */
+    line-height: 1.5em; /* Adjusted line-height */
+    padding-left: 2.5em; /* Increased padding */
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: none;
+    text-decoration: none;
+    color: #818181;
+    transform: translateX(30%);
+  }
+  
+  .fancy .top-key,
+  .fancy .bottom-key-1,
+  .fancy .bottom-key-2 {
+    transition: width 0.5s ease-out, left 0.3s ease-out, right 0.3s ease-out;
+  }
+  
+  .fancy:hover {
+    color: white;
+    background: #cacaca;
+  }
+  
+  .fancy:hover::before {
+    width: 1.75rem; /* Adjusted width */
+    background: white;
+  }
+  
+  .fancy:hover .text {
+    color: white;
+    padding-left: 2em; /* Adjusted padding */
+  }
+  
+  .fancy:hover .top-key {
+    left: -2px;
+    width: 0;
+  }
+  
+  .fancy:hover .bottom-key-1,
+  .fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+  }

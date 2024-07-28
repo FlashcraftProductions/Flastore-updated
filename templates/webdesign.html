@@ -1,0 +1,163 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Discover stylish and comfortable clothing tailored for you.</h1>
+        <p>Find your perfect fit with our curated selection of stylish and comfortable clothing.</p>
+        <button class="top_button" id="get-in-touch" >
+            Get In Touch
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+            </svg>
+        </button>
+    </div>
+    <div class="hero-image">
+        <img src="{{url_for('static',filename='products/hero_web.png')}}" alt="web-designer">
+    </div>
+</section>
+
+<div class="container1">
+    <div class="image-section">
+        <img src="static\products\frontend.png" alt="Standee Image">
+    </div>
+    <div class="details-section">
+        <h1>UI - UX Design</h1>
+        <p class="subheading">Event prep just got easier.</p>
+        <ul>
+            <li>Conduct thorough user research and usability testing.</li>
+            <li>Create custom, responsive, and accessible designs.</li>
+            <li>Develop clear information architecture and intuitive navigation.</li>
+            <li>Ensure consistent and visually appealing branding across all touchpoints.</li>
+        </ul>
+        <button class="getestimate" id="contact-us" >Get estimate</button>
+    </div>
+</div>
+
+<div class="container2">
+    <div class="image-section">
+        <img src="static\products\ui2.png" alt="Standee Image">
+    </div>
+    <div class="details-section">
+        <h1>Front-End Development</h1>
+        <p class="subheading">Event prep just got easier.</p>
+        <ul>
+            <li>Develop responsive and adaptive designs for optimal performance on all devices.</li>
+            <li>Implement performance optimization techniques to enhance loading times and site efficiency.</li>
+            <li>Ensure cross-browser compatibility for a consistent user experience.</li>
+            <li>Write clean, maintainable, and modular code adhering to industry best practices.</li>
+        </ul>
+        <button class="getestimate" id="contact-us2" >Get estimate</button>
+    </div>
+</div>
+
+<div class="container3">
+    <div class="image-section">
+        <img src="static\products\backend.png" alt="Standee Image">
+    </div>
+    <div class="details-section">
+        <h1>Back-End Development</h1>
+        <p class="subheading">Event prep just got easier.</p>
+        <ul>
+            <li>Design and implement a server architecture that can handle growth and increased traffic efficiently.</li>
+            <li>Ensure data security through encryption, secure authentication, and regular security audits.</li>
+            <li>Optimize database design and queries for performance and reliability.</li>
+            <li>Create and integrate RESTful APIs to enable seamless communication between different parts of the system and third-party services.</li>
+        </ul>
+        <button class="getestimate" id="contact-us3" >Get estimate</button>
+    </div>
+</div>
+
+<div class="container4">
+    <div class="image-section">
+        <img src="static\products\free.png" alt="Standee Image">
+    </div>
+    <div class="details-section">
+        <h1>Hassel Free</h1>
+        <p class="subheading">Event prep just got easier.</p>
+        <ul>
+            <li>We leverage intuitive drag-and-drop website builders that enable you to create stunning websites without any coding knowledge, ensuring a smooth and straightforward experience.</li>
+            <li>Our service includes access to a wide range of professionally designed templates, allowing you to quickly and easily craft visually appealing websites tailored to your specific needs.</li>
+            <li>We ensure a fast and efficient setup process, getting your website live in no time. Our streamlined approach minimizes downtime and accelerates your online presence.</li>
+            <li>Our agency provides ongoing support and automatic updates, ensuring your website remains up-to-date and operates smoothly without requiring any additional effort from you.</li>
+        </ul>
+        <button class="getestimate" id="contact-us4" >Get estimate</button>
+    </div>
+</div>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+        <form class="form" action="/" method="POST">
+
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="first_name">
+                    <span>first name</span>
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="last_name">
+                    <span>last name</span>
+                </label>
+            </div>  
+                    
+            <label>
+                <input required="" placeholder="" type="email" class="input" name="email">
+                <span>email</span>
+            </label> 
+                
+            <label>
+                <input required="" name="contact" type="tel" placeholder="" class="input">
+                <span>contact number</span>
+            </label>
+            <label>
+                <textarea required="" rows="3" name="message" placeholder="" class="input01"></textarea>
+                <span>message</span>
+            </label>
+            
+            <button class="fancy" href="#">
+             submit
+            </button>
+        </form>
+
+        
+        {% with messages= get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        
+    </div>
+
+        
+</section>
+
+<script>
+
+    document.getElementById('contact-us').addEventListener('click', function() {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('contact-us2').addEventListener('click', function() {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('contact-us3').addEventListener('click', function() {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('contact-us4').addEventListener('click', function() {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    
+    </script>
+
+
+{% endblock %}
